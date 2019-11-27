@@ -4,25 +4,25 @@ from django.http import HttpResponse
 from django.template import loader
 
 
-# Create your views here.
+#Create your views here.
 
-# def view(request):
-#     list  = [0,232,45,123,4,53423,54,23]
-#     template  = loader.get_template('index.html')
-#     context = {
-#         "test": "TEXT!",
-#         "list": list,
-#         "name": "Alex",
-#         "surname": "Jazun",
-#         "coords": {
-#             "x": "x coords",
-#             "y": "y coords",
-#         },
-#         # 'list': [1,2,3,4]
-#     }
-#     return HttpResponse(template.render(context, request))
+def view(request):
+    list  = [0,232,45,123,4,53423,54,23]
+    template  = loader.get_template('index.html')
+    context = {
+        "test": "TEXT!",
+        "list": list,
+        "name": "Alex",
+        "surname": "Jazun",
+        "coords": {
+            "x": "x coords",
+            "y": "y coords",
+        },
+        # 'list': [1,2,3,4]
+    }
+    return HttpResponse(template.render(context, request))
 
-
+"""
 def view(request):
     list = [0, 232, 45, 123, 0, 4, 53423, 54, 23]
     context = {
@@ -37,7 +37,7 @@ def view(request):
         # 'list': [1,2,3,4]
     }
     return render(request, "index.html", context)
-
+"""
 
 def filter(request):
     array_for_sort = [
