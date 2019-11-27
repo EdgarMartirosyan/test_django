@@ -26,7 +26,7 @@ def view(request):
 
 """
 def view(request):
-    list = [53423, 232, 45, 123, 0, 4, 53423, 54, 23]
+    list = [0, 232, 45, 123, 0, 4, 53423, 54, 23]
     context = {
         "test": "TEXT!",
         "list": list,
