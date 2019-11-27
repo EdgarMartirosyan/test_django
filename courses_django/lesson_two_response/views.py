@@ -29,7 +29,7 @@ def render_html(request):
         <!-- header start -->
         <div id="header" class="section">
             <img alt="" class="img-circle" src="https://code.sololearn.com/Icons/Avatars/0.jpg">
-            <p>Alex Simpson</p>
+            <h1>Edgar Martirosyan</h1>           
         </div>
         <!-- header end -->
         
@@ -37,7 +37,7 @@ def render_html(request):
         <div class="section">
             <h1><span>About Me</span></h1>
             <p>
-                Hey! I'm <strong>Alex</strong>. Coding has changed my world. It's not just about apps. Learning to code gave me <i>problem-solving skills</i> and a way to communicate with others on a technical level. I can also develop websites and use my coding skills to get a better job. And I learned it all at <strong>SoloLearn</strong> where they build your self-esteem and keep you motivated. Join me in this rewarding journey. You'll have fun, get help, and learn along the way!
+                Hey! I'm <strong>Edgar</strong>. Coding has changed my world. It's not just about apps. Learning to code gave me <i>problem-solving skills</i> and a way to communicate with others on a technical level. I can also develop websites and use my coding skills to get a better job. And I learned it all at <strong>SoloLearn</strong> where they build your self-esteem and keep you motivated. Join me in this rewarding journey. You'll have fun, get help, and learn along the way!
             </p>
             <p class="quote">"Declare variables, not war"</p>
         </div>

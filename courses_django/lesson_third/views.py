@@ -6,30 +6,32 @@ from django.template import loader
 
 #Create your views here.
 
+
+"""
 def view(request):
-    list  = [0,232,45,123,4,53423,54,23]
-    template  = loader.get_template('index.html')
+    list = [53423, 232, 45, 123, 4, 0, 54, 23]
+    template= loader.get_template('index.html')    
     context = {
         "test": "TEXT!",
         "list": list,
-        "name": "Alex",
-        "surname": "Jazun",
+        "name": "Edgar",
+        "surname": "Martirosyan",
         "coords": {
             "x": "x coords",
             "y": "y coords",
         },
-        # 'list': [1,2,3,4]
+         #'list': [1,2,3,4]
     }
     return HttpResponse(template.render(context, request))
 
 """
 def view(request):
-    list = [0, 232, 45, 123, 0, 4, 53423, 54, 23]
+    list = [53423, 232, 45, 123, 0, 4, 53423, 54, 23]
     context = {
         "test": "TEXT!",
         "list": list,
-        "name": "Alex",
-        "surname": "Jazun",
+        "name": "Edgar",
+        "surname": "Martirosyan",
         "coords": {
             "x": "x coords",
             "y": "y coords",
@@ -37,7 +39,7 @@ def view(request):
         # 'list': [1,2,3,4]
     }
     return render(request, "index.html", context)
-"""
+
 
 def filter(request):
     array_for_sort = [
@@ -58,7 +60,8 @@ def filter(request):
         "float": 32.223,
         "number": 12345678,
         "boolean_var": None,
-        'name': "alex"
+        'name': "Edgar",
+        'text': "Edgar",
     }
 
     return render(request, "filter.html", context)
@@ -70,8 +73,8 @@ def tags_if(request):
     var2 = "var2"
     var3 = "var3"
     obj = {
-        'name': "Alex",
-        'surname': "Parker"
+        'name': "Edgar",
+        'surname': "Martirosyan"
     }
     # list =[]
     context = {
