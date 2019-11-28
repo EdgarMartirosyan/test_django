@@ -4,11 +4,11 @@ import datetime
 register = template.Library()
 
 
-
+"""
 @register.filter(name="my_lower_filter")
 def my_lower_filter(value):  # Only one argument.
     return value.lower()
-
+"""
 
 # register.filter('my_lower_filter', my_lower_filter)
 
