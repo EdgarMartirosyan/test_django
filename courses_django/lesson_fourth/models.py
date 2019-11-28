@@ -20,19 +20,19 @@ class Example(models.Model):
     file_field              = models.FileField(upload_to = 'file')
     image_field             = models.ImageField(upload_to = 'images')
 
-"""
+
 class Author(models.Model):
     name        = models.CharField(max_length=50 , verbose_name = "Имя")
     surname     = models.CharField(max_length=50 , verbose_name = "Фамилия")
     date_birth  = models.DateField(auto_now=False , verbose_name = "Дата рождения")
 
     def __str__(self):
-        return "Имя : %s Фамилия : %s" %(self.name, self.surname)
+        return self.name
 
 
-    class Meta:
-        verbose_name = "Автор"
-        verbose_name_plural = "Авторы"
+    # class Meta:
+    #     verbose_name = "Автор"
+    #     verbose_name_plural = "Авторы"
 
 
 class Book(models.Model):
@@ -103,7 +103,7 @@ class Article(models.Model):
 
 
 
-"""
+
 '''
 CASCADE
 Каскадное удаление. Django эмулирует поведение SQL правила ON DELETE CASCADE и так же удаляет объекты, связанные через ForeignKey.
