@@ -13,21 +13,17 @@ admin.site.register(models.Publication)
 admin.site.register(models.Article)
 
 
-
 class AuthorAdmin(admin.ModelAdmin):
-    #list_display = ['name' , 'surname']
-    list_display = [field.name for field in models.Author._meta.fields]
-   # exclude = ["name"] #прячет поле
-    fields = ["name" , 'surname'] # показывает поле
-    list_filter = ['name']
-    #search_fields = ['name' , 'surname']
-    search_fields = [field.name for field in models.Author._meta.fields]
+    #list_display = ['name', 'surname']
+    # list_display = [field.name for field in models.Author._meta.fields]
+    # exclude = ["name"]  # прячет поле
+    # fields = ["name", 'surname']  # показывает поле
+    # list_filter = ['name']
+    # search_fields = ['name', 'surname']
+    # search_fields = [field.name for field in models.Author._meta.fields]
+
     class Meta:
         model = models.Author
 
 
-
-
-
-
-admin.site.register(models.Author ,AuthorAdmin)
+#admin.site.register(models.Author, AuthorAdmin)

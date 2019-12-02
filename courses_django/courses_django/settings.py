@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'lesson_two_response',
     'lesson_third',
     'lesson_fourth',
+    'lesson_fifth',
 ]
 
 MIDDLEWARE = [
@@ -109,9 +110,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-#LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-us'
 #LANGUAGE_CODE = 'ru-RU'
-LANGUAGE_CODE = 'hy-hy'
+#LANGUAGE_CODE = 'hy-hy'
 
 TIME_ZONE = 'UTC'
 
