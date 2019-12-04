@@ -1,5 +1,5 @@
 from django.shortcuts import render , redirect
-from django.http import  HttpResponseRedirect ,HttpResponse
+from django.http import HttpResponseRedirect, HttpResponse
 from . import forms
 from django.core.mail import send_mail
 from . import models
@@ -11,7 +11,7 @@ from django.shortcuts import render
 
 
 def search_form(request):
-    return render(request , 'search_form.html' , {})
+    return render(request, 'search_form.html', {})
 
 
 def search(request):
@@ -43,15 +43,16 @@ def file_input(request):
     some_file.close()
     return HttpResponse("Данные успешно были записаны!")
 
+
 # def form(request):
 #
 #     form_for_author1 = forms.AuthorOneForm
-#     form_for_article  = forms.ArticleForm
+#     form_for_article = forms.ArticleForm
 #     form_contact  = forms.ContactForm
 #     context = {
 #         'form_for_author1': form_for_author1,
-#          'form_for_article' : form_for_article,
-#          'form_contact' : form_contact
+#         'form_for_article' : form_for_article,
+#         'form_contact' : form_contact
 #     }
 #     return render(request , 'form.html' , context)
 
