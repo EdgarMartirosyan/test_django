@@ -29,13 +29,15 @@ class Human(models.Model):
         (CS , 'C#'),
         (CPP , 'C++'),
     )
-    name  = models.CharField(max_length=50  ,verbose_name="Имя")
-    surname  = models.CharField(max_length=50  ,verbose_name="Фамилия")
-    birth  = models.DateField(auto_now_add=False , auto_now=False)
-    company  = models.CharField(max_length = 150  , choices=CHOICE_COMPANY)
+
+    name = models.CharField(max_length=50, verbose_name="Имя")
+    surname = models.CharField(max_length=50, verbose_name="Фамилия")
+    birth = models.DateField(auto_now_add=False, auto_now=False)
+    company = models.CharField(max_length=150, choices=CHOICE_COMPANY)
     position = models.CharField(max_length=15, choices=POSITION_CHOICES)
-    language  = models.CharField(max_length=10 , choices= LANGUAGE_CHOICES , default=PYTHON)
+    language = models.CharField(max_length=10, choices= LANGUAGE_CHOICES, default=PYTHON)
     salary = models.IntegerField()
+    sex = models.BooleanField(default=True)
 
     def __str__(self):
         return 'Имя  - {0} , Фамилия -  {1} , Компания - {2}'.format(self.name , self.surname , self.company)
@@ -49,6 +51,7 @@ class Human(models.Model):
             'position': self.position,
             'language': self.language,
             'salary': self.salary,
+            'sex': self.sex,
 
         }
         return obj

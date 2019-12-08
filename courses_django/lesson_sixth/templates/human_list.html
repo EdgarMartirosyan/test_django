@@ -17,6 +17,7 @@
         <td>Должность</td>
         <td>Язык программирования</td>
         <td>Зарплата</td>
+        <td>Пол</td>
        </tr>
     {% for human in all_humans %}
     <tr>
@@ -28,6 +29,7 @@
         <td>{{human.position}}</td>
         <td>{{human.language}}</td>
         <td>{{human.salary}}</td>
+        <td>{{human.sex}}</td>
     </tr>
     {% endfor %}
 </table>
@@ -184,7 +186,7 @@
 
 <h2>Сортировка по ЗП</h2>
 <table border = '1' cellpadding="5px">
-    <tr style = 'background : pink; color: black;'>
+    <tr style = 'background : #5eff66; color: black;'>
         <td>ID</td>
         <td>Имя</td>
         <td>Фамилия</td>
@@ -193,6 +195,7 @@
         <td>Должность</td>
         <td>Язык программирования</td>
         <td>Зарплата</td>
+        <td>Пол</td>
        </tr>
 {% for elem in sorted_salary %}
     <tr>
@@ -204,6 +207,34 @@
         <td>{{elem.position}}</td>
         <td>{{elem.language}}</td>
         <td>{{elem.salary}}</td>
+    </tr>
+{% endfor %}
+</table>
+
+<h2>ցուցադրել ըստ սեռի </h2>
+<table border = '1' cellpadding="5px">
+    <tr style = 'background : #b947ff; color: black;'>
+        <td>ID</td>
+        <td>Имя</td>
+        <td>Фамилия</td>
+        <td>Дата рождения</td>
+        <td>Компания</td>
+        <td>Должность</td>
+        <td>Язык программирования</td>
+        <td>Зарплата</td>
+        <td>Пол</td>
+       </tr>
+{% for elem in filtered_sex %}
+    <tr>
+        <td>{{elem.id}}</td>
+        <td>{{elem.name}}</td>
+        <td>{{elem.surname}}</td>
+        <td>{{elem.birth}}</td>
+        <td>{{elem.company}}</td>
+        <td>{{elem.position}}</td>
+        <td>{{elem.language}}</td>
+        <td>{{elem.salary}}</td>
+        <td>{{elem.sex}}</td>
     </tr>
 {% endfor %}
 </table>
