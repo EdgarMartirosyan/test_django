@@ -29,7 +29,7 @@ class MainView(TemplateView):
 
 class RegisterFormView(FormView):
     form_class = UserCreateForm
-    success_url = "/lesson-seventh/login/"
+    success_url = "/lesson_seventh/login/"
 
     template_name = "register.html"
 
@@ -47,7 +47,7 @@ class LoginFormView(FormView):
 
     template_name = "login.html"
 
-    success_url = "/lesson-seventh/"
+    success_url = "/lesson_seventh/"
 
     def form_valid(self, form):
         # Получаем объект пользователя на основе введённых в форму данных.
@@ -62,4 +62,4 @@ class LoginFormView(FormView):
 class LogoutView(View):
     def get(self, request):
         logout(request)
-        return HttpResponseRedirect("/lesson-seventh/")
+        return HttpResponseRedirect("/lesson_seventh/")

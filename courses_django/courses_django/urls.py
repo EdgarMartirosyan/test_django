@@ -27,4 +27,5 @@ urlpatterns = [
     url(r'^lesson_fifth/', include('lesson_fifth.urls')),
     url(r'^lesson_sixth/', include('lesson_sixth.urls')),
     url(r'^lesson_seventh/', include('lesson_seventh.urls')),
+    url(r'^lesson_eighth/', include('lesson_eighth.urls')),
 ]

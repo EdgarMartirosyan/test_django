@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'lesson_fifth',
     'lesson_sixth',
     'lesson_seventh',
+    'lesson_eighth',
 ]
 
 MIDDLEWARE = [
